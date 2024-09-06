@@ -1,0 +1,95 @@
+/* Base Styling */
+body{
+    background-image: url(./images/bg9.jpg);
+    background-size: cover;
+}
+main {
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    
+}
+
+h1{
+    color: black;
+    padding-left:40%;
+    margin: 0%;
+}
+h2{
+    padding-left: 40%;
+}
+h3{
+    font-weight: bold;
+}
+
+p {
+    margin: 20px;
+    color: #160101;
+    text-align: justify;
+}
+
+/* Branch Section Styling */
+.branch {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+    background: #589bae;
+    padding: 35px;
+    border-radius: 8px;
+}
+
+.branch img {
+    max-width: 100%;
+    height: 40vh;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.branch p {
+    flex: 2;
+}
+section.table {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #7c7f81;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #5e9abd;
+}
+
+tfoot {
+    background-color: #e9edf1;
+}
+
+tfoot td {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+ 
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .branch {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .branch img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

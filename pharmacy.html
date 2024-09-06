@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./pharmacy.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+</head>
+<body>
+    <header id="header">
+        <a href="./home.html">
+        <section id="logo">
+            <img src="./images\logo.jpg">
+        </section>
+        </a>
+        <nav>
+            <ul class="sidebar">
+            
+                <li onclick=hidesidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+                <a href="./home.html" class="menu-item">Home</a>
+                <a href="./about.html" class="menu-item">About us</a>
+                <a href="./service.html" class="menu-item">Services</a>
+                <a href="./doctors.html" class="menu-item">Doctors</a>
+                <a href="./consulting.html" class="menu-item">Consulting Reservation</a>
+                <a href="./pharmacy.html" class="menu-item active">Pharmacy</a>
+                <a href="./contact.html" class="menu-item">Contact us</a>
+                
+            </ul>
+            <ul>
+            
+                <a href="./home.html" class="menu-item hideOnMobile">Home</a>
+                <a href="./about.html" class="menu-item hideOnMobile">About us</a>
+                <a href="./service.html" class="menu-item hideOnMobile">Services</a>
+                <a href="./doctors.html" class="menu-item hideOnMobile">Doctors</a>
+                <a href="./consulting.html" class="menu-item hideOnMobile">Consulting Reservation</a>
+                <a href="./pharmacy.html" class="menu-item hideOnMobile active">Pharmacy</a>
+                <a href="./contact.html" class="menu-item hideOnMobile">Contact us</a>
+                <section class="menu">
+                <li class="menu-button" onclick=showsidebar()><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="35px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+                </section>
+            </ul>
+    
+            <script>
+                function showsidebar(){
+                    const sidebar=document.querySelector('.sidebar')
+                    sidebar.style.display='flex'
+                }
+                function hidesidebar(){
+                    const sidebar=document.querySelector('.sidebar')
+                    sidebar.style.display='none'
+                }
+            </script>
+                <div class="search">
+                    <form>
+                        <input type="text" placeholder="Search here">
+                        <button type="submit">Go</button>
+                    </form>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Care Plus Dispenser</h1>
+        <section class="form">
+        <h2>Medicine</h2>
+        <p>Please select the medicines you wish to purchase:</p>
+        
+        <form id="pharmacy-form">
+            <section>
+                <input type="text" placeholder="Search here">
+                <button type="submit" name="submit">Search</button>
+            </section>
+            <section>
+                <h2>categories</h2>
+                
+                <ul>
+                    <li onclick="toggleSubList(this)">
+                        Baby care
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption1_1" name="subOption1_1" value="Sub Option 1.1">
+                                <label for="subOption1_1">Acetaminophen</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption1_2" name="subOption1_2" value="Sub Option 1.2">
+                                <label for="subOption1_2">Ibuprofen</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption1_2" name="subOption1_2" value="Sub Option 1.2">
+                                <label for="subOption1_2">Simethicone drops</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption1_2" name="subOption1_2" value="Sub Option 1.2">
+                                <label for="subOption1_2">Rectal Thermometer</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption1_2" name="subOption1_2" value="Sub Option 1.2">
+                                <label for="subOption1_2">Oral Rehydration Solution</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Dental Care
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption2_1" name="subOption2_1" value="Sub Option 2.1">
+                                <label for="subOption2_1">Antibiotics</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption2_2" name="subOption2_2" value="Sub Option 2.2">
+                                <label for="subOption2_2">Antivirals</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption2_3" name="subOption2_3" value="Sub Option 2.3">
+                                <label for="subOption2_3">Sedatives</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption2_3" name="subOption2_3" value="Sub Option 2.3">
+                                <label for="subOption2_3">Anti-anxiety medications</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Doctors Equipments
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Defibrillators</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">ECG Machine</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Stethscope</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Thermometer</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Ultrasound</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Medical lights</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Veterinary
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Acepromazine</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Bethanechol</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Clindamycin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Doxycycline</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Zonisamide</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        First Aid Items
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Bandage</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Antiseptic</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Aspirin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Acetaminophen</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Hydrocortisone</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Diabetes Care
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Metformin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Glucagon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Sulfonylureas</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Thiazolidinediones</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Meglitinides</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Nebulizer
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Albuterol</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Budesonide</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Cromolyn sodium</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Ipratropium</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Levalbuterol</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li onclick="toggleSubList(this)">
+                        Orthopedic Aid
+                        <ul class="sub-list">
+                            <li>
+                                <input type="checkbox" id="subOption3_1" name="subOption3_1" value="Sub Option 3.1">
+                                <label for="subOption3_1">Crutch</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Walkers</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Wheelchairs</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Assistive cane</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="subOption3_2" name="subOption3_2" value="Sub Option 3.2">
+                                <label for="subOption3_2">Rollators</label>
+                            </li>
+                        </ul>
+                </ul>
+                
+                <script>
+                    function toggleSubList(item) {
+                        item.classList.toggle('active');
+                    }
+                </script>
+                </section>
+
+                <section>
+                Weight:<label for="weight"></label>
+                <input type="text" name="weight" placeholder="mg/ml">
+        </section>
+            <section>
+                Quantity:<label for="Quantity"></label>
+                <input type="text" name="medicine">
+            </section>
+            <section>
+                <button type="submit">Next</button>
+            </section>
+               
+                <h2>Selected Items</h2>
+                <table id="selected-items">
+                        <tr>
+                            <th>Medicine:</th>
+                            <th>Quantity:</th>
+                            <th>Price:</th>
+                        </tr>
+                        <!-- Items will be dynamically added here -->
+                        <tr>
+                            <td colspan="2">Total:</td>
+                            <td id="total-price">Rs:0.00</td>
+                        </tr>
+                </table>
+                <div class="submit"></div>
+                <button type="button" id="add-to-favorites">Add to Favourites</button>
+                <button type="submit">Buy Now</button>
+            </section>
+        </form>
+    </main>
+    <footer class="footer">
+        <section class="footer-content">
+            <div class="contact">
+                <h4>Contact us</h4>
+                <p>Email:Info@careplus.com</p>
+                <p>Phone:+9481234598</p>
+                <p>Address:Care Plus hospital,Peradeniya Road,Kandy</p>
+            </div>
+            <div class="links">
+                <h4>Quick Links</h4>
+                <a href="./home.html" class="menu-item">Home</a>
+                <a href="./about.html" class="menu-item">About us</a>
+                <a href="./service.html" class="menu-item">Services</a>
+                <a href="./doctors.html" class="menu-item">Doctors</a>
+                <a href="./consulting.html" class="menu-item">Consulting Reservation</a>
+                <a href="./pharmacy.html" class="menu-item active">Pharmacy</a>
+                <a href="./contact.html" class="menu-item">Contact us</a>
+            </div>
+            <div class="social">
+                <h4>Follow us</h4>
+                <img src="./images/fbicon.jpg">
+                <img src="./images/youtubeicon.jpg">
+                <img src="./images/instericon.jpg">
+                <img src="./images/twitericon.jpg">
+            </div>
+        </section>
+        
+        <p>&copy;2024 Care Plus Hospital(PVT)Ltd.All Rights Reserved</p>
+    
+    </footer>
+    <!--https://suwasevana.lk/-->
+ </body>
+ </html>   
